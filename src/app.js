@@ -6,8 +6,10 @@ import config from './config/config.js';
 
 const app = express();
 
-//import { mongoose } from './config/database.config';
+import { connectDB } from './config/database.config.js'
 import routerAPI from './api/v1/routes/index.js';
+
+connectDB();
 
 app.set('port', config.PORT);
 
